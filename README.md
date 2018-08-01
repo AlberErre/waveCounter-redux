@@ -1,2 +1,2 @@
-# Counter app (React Native + Redux)
+# CountErre (React Native + Redux)
 Simple counter app made using React Native and Redux and some styling
