@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
 
-const Actions = () => {
+const actions = {
 
-  return(
+	add: {
+		type: 'INCREASE_COUNT'
+	},
 
+	sub: {
+		type: 'DECREASE_COUNT'
+	},
 
-
-  );
-
+	reset: {
+		type: 'RESET_COUNT'
+	}
 };
 
-export default Actions;
+export default actions;
 
 

@@ -5,26 +5,7 @@ import { Provider } from 'react-redux';
 
 // Redux stuff
 
-const initialState = {
-	counter: 0
-};
-
-const reducer = (state = initialState, action) => {
-
-  switch(action.type) {
-
-    case 'INCREASE_COUNT': 
-      return { counter: state.counter + 1}
-
-    case 'DECREASE_COUNT': 
-      return { counter: state.counter - 1}
-
-    case 'RESET_COUNT': 
-      return { counter: 0}
-
-    default: return state
-  }
-};
+import reducer from './src/reducers/reducer';
 
 const store = createStore(reducer);
 
@@ -37,8 +18,8 @@ class App extends Component {
 
   render() {
     return (
-    	// Provider va aqui para envolver toda la app con el store
-    	// Para que comunique, tenemos que usar mapStateToProps + connect
+    	// Provider va aqui para envolver toda la app con el global store
+    	// Para que comunique, tenemos que usar "connect" dentro de "Counter"
 		<Provider store={store}>
 	  		<Counter />
 	 	</Provider>

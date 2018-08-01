@@ -11,6 +11,7 @@ import RedArrow from './components/RedArrow';
 import TextCount from './components/TextCount';
 
 import { connect } from 'react-redux';
+import actions from './actions/actions';
 
 class Counter extends Component {
   constructor(props) {
@@ -55,12 +56,13 @@ const mapSateToProps = (state) => (
 
 // Esto hace dispatch de las acciones mediante this.props.XXXX
 // luego eso se pasa al onPress dentro del componente
-// No llama a nada, esta aqui para poner las funciones como una prop mas
+// lo metemos en connect, esta aqui para poner las funciones como una prop mas
 const mapDispatchToProps = (dispatch) => (
   {
-    addCounter: () => dispatch({ type: 'INCREASE_COUNT'}),
-    subCounter: () => dispatch({ type: 'DECREASE_COUNT'}),
-    resetCounter: () => dispatch({ type: 'RESET_COUNT'})
+    //addCounter: () => dispatch({ type: 'INCREASE_COUNT'}),
+    addCounter: () => dispatch(actions.add),
+    subCounter: () => dispatch(actions.sub),
+    resetCounter: () => dispatch(actions.reset)
   }
 );
 
