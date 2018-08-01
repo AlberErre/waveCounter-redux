@@ -17,6 +17,6 @@ export default TextCount;
 
 const styles = StyleSheet.create({
   textDisplayed: {
-    fontSize: 30,
+    fontSize: 40,
   }
 });
