@@ -1,2 +1,2 @@
-# Timer-React-Redux
-A timer app implementation using React + Redux
+# Counter app (React Native + Redux)
+Simple counter app made using React Native and Redux and some styling
