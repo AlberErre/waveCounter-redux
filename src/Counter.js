@@ -21,7 +21,7 @@ class Counter extends Component {
 
   render() {
     return (
-      <ImageBackground source={require('./assets/background.jpg')} resizeMode='cover' style={styles.imageBackground}>
+      <ImageBackground source={require('./assets/background.jpg')} style={styles.imageBackground}>
       <View style={styles.container}>
         <View style={styles.buttonsContainer}>
 
