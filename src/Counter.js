@@ -3,6 +3,7 @@ import {
   StyleSheet,
   Text,
   View,
+  ImageBackground,
 } from 'react-native';
 
 import RestartCount from './components/RestartCount';
@@ -20,6 +21,7 @@ class Counter extends Component {
 
   render() {
     return (
+      <ImageBackground source={require('./assets/background.jpg')} resizeMode='cover' style={styles.imageBackground}>
       <View style={styles.container}>
         <View style={styles.buttonsContainer}>
 
@@ -42,6 +44,7 @@ class Counter extends Component {
 
         </View>
       </View>
+      </ImageBackground>
     );
   }
 }
@@ -71,21 +74,30 @@ export default connect(mapSateToProps, mapDispatchToProps)(Counter);
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     justifyContent: 'center',
     alignItems: 'center',
   },
   buttonsContainer: {
+    backgroundColor: '#fff',
     flexDirection: 'column',
     justifyContent: 'space-around',
     alignItems: 'center',
-    width: 200,
-    height: 400,
+    width: 300,
+    height: 300,
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
+    borderBottomLeftRadius: 30,
+    borderBottomRightRadius: 100,
   },
   countContainer: {
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
     width: 300,
+  },
+  imageBackground: {
+    flex: 1,
+    width: '100%',
+    height: '100%',
   }
 });
