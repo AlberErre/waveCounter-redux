@@ -1,14 +1,11 @@
-import React from 'react';
-
-// init global state
 const initialState = {
-	counter: 0
+  counter: 0
 };
 
 const reducer = (state = initialState, action) => {
 
   switch(action.type) {
-
+		  
     case 'INCREASE_COUNT': 
       return { counter: state.counter + 1 }
 
