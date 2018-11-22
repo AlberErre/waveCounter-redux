@@ -49,20 +49,14 @@ class Counter extends Component {
   }
 }
 
-// Esto pasa el estado a props, por eso hacemos this.props.counter
-// en lugar de this.state.counter
 const mapSateToProps = (state) => (
   {
     counter: state.counter
   }
 );
 
-// Esto hace dispatch de las acciones mediante this.props.XXXX
-// luego eso se pasa al onPress dentro del componente
-// lo metemos en connect, esta aqui para poner las funciones como una prop mas
 const mapDispatchToProps = (dispatch) => (
   {
-    //addCounter: () => dispatch({ type: 'INCREASE_COUNT'}),
     addCounter: () => dispatch(actions.add),
     subCounter: () => dispatch(actions.sub),
     resetCounter: () => dispatch(actions.reset)
