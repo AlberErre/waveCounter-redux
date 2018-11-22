@@ -1,18 +1,11 @@
 import React, { Component } from 'react';
-import {
-  StyleSheet,
-  Text,
-  View,
-  ImageBackground,
-} from 'react-native';
-
-import RestartCount from './components/RestartCount';
-import GreenArrow from './components/GreenArrow';
-import RedArrow from './components/RedArrow';
-import TextCount from './components/TextCount';
-
+import { StyleSheet, View, ImageBackground } from 'react-native';
 import { connect } from 'react-redux';
 import actions from './actions/actions';
+import RestartCount from './components/buttons/RestartCount';
+import GreenArrow from './components/buttons/GreenArrow';
+import RedArrow from './components/buttons/RedArrow';
+import TextCount from './components/TextCount';
 
 class Counter extends Component {
   constructor(props) {
@@ -21,29 +14,33 @@ class Counter extends Component {
 
   render() {
     return (
-      <ImageBackground source={require('./assets/background.jpg')} style={styles.imageBackground}>
-      <View style={styles.container}>
-        <View style={styles.buttonsContainer}>
+      <ImageBackground
+        source={require('./assets/background.jpg')}
+        style={styles.imageBackground}>
 
-          <GreenArrow 
-            add={() => this.props.addCounter()}
-          />
+        <View style={styles.container}>
+          <View style={styles.buttonsContainer}>
 
-          <View style={styles.countContainer}>
-            <TextCount
-              counter={this.props.counter}
+            <GreenArrow 
+              add={ () => this.props.addCounter()}
             />
-            <RestartCount
-              reset={() => this.props.resetCounter()}
+
+            <View style={styles.countContainer}>
+              <TextCount
+                counter={this.props.counter}
+              />
+              <RestartCount
+                reset={ () => this.props.resetCounter()}
+              />
+            </View>
+
+            <RedArrow 
+              sub={ () => this.props.subCounter()}
             />
+
           </View>
-
-          <RedArrow 
-            sub={() => this.props.subCounter()}
-          />
-
         </View>
-      </View>
+
       </ImageBackground>
     );
   }
