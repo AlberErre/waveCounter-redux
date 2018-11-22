@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-import Counter from './src/Counter';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import Counter from './src/Counter';
+import counterReducer from './src/reducers/counterReducer';
 
-
-import reducer from './src/reducers/reducer';
-
-const store = createStore(reducer);
-
+const store = createStore(counterReducer);
 
 class App extends Component {
   constructor(props) {
@@ -16,9 +13,9 @@ class App extends Component {
 
   render() {
     return (
-		<Provider store={store}>
-	  		<Counter />
-	 	</Provider>
+      <Provider store={store}>
+          <Counter />
+      </Provider>
     );
   }
 }
