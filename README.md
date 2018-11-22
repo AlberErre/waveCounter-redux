@@ -16,11 +16,3 @@ Note: tested on real device (iPhone 6 Plus)
 
 ## Example
 <img width=400px src="./erreCount-screen.png">
-
-### Development
-Everything has been developed using npm, thus:
-
-  `npm install`
-
-  `npm start` --> tested on real device (iPhone 6 Plus)
- 
