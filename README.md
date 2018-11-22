@@ -6,7 +6,7 @@ Simple counter app based on React Native + Redux
 
 ## QuickStart
 
-Prepare your simulator / real device (using Expo)
+Prepare your simulator / real device (using [Expo](https://expo.io/))
 
 ```
 npm install
